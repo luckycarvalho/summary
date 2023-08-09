@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'HankenGrotesk-Medium';
+    src: url(../fonts/static/HankenGrotesk-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'HankenGrotesk-Bold';
+    src: url(../fonts/static/HankenGrotesk-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'HankenGrotesk-ExtraBold';
+    src: url(../fonts/static/HankenGrotesk-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'HankenGrotesk-Normal';
+    src: url(../fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
+}
+
+:root {
+    --font-normal: 'HankenGrotesk-Normal', sans-serif;
+    --font-medium: 'HankenGrotesk-Medium', sans-serif;
+    --font-bold: 'HankenGrotesk-Bold', sans-serif;
+    --font-extrabold: 'HankenGrotesk-Extrabold', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-color: white;
+    font-family: var(--font-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 800px;
+    min-height: 450px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.151);
+    border-radius: 30px;
+}
+
+    /*Your Result*/
+
+.result {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: white;
+    border-radius: 30px;
+}
+
+.result h3 {
+    color: hsl(221, 100%, 96%);
+    font-weight: normal;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.result .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 171px;
+    height: 180px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    margin-bottom: 1.5em;
+}
+
+.result .number span {
+    font-size: 4em;
+    font-family: var(--font-extrabold);
+}
+
+.result .number p {
+    color: hsl(241, 100%, 89%);
+}
+
+.result h2 {
+    font-family: var(--font-bold);
+    margin-bottom: 1em;
+}
+
+.result p {
+    width: 70%;
+    text-align: center;
+    color: hsl(221, 100%, 96%);
+   
+}
+
+    /*Summary*/
+
+.summary {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color:  hsl(224, 30%, 27%);
+}
+
+.summary h3 {
+    width: 70%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-family: var(--font-extrabold);
+}
+
+.summary div {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 1em;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.reaction {
+   background-color: hsla(0, 100%, 67%, 0.137);
+}
+
+.reaction-span {
+    color: hsl(0, 100%, 67%);
+}
+
+.memory {
+    background-color: hsla(39, 100%, 56%, 0.116);
+}
+
+.memory-span {
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+    background-color: hsla(166, 100%, 37%, 0.096);
+}
+
+.verbal-span{
+    color: hsl(166, 100%, 37%);
+}
+
+.visual {
+    background-color: hsla(234, 85%, 45%, 0.137);
+}
+
+.visual-span {
+    color: hsl(234, 85%, 45%);
+}
+
+.summary img {
+    margin-right: 5px;
+}
+
+.summary p {
+    width: 100%;
+    text-align: end;
+    color:  gray;
+    font-family: var(--font-bold);
+}
+
+.span-bold {
+    color: hsl(224, 30%, 27%);
+}
+
+.summary .btn {
+    margin-top: 1em;
+    width: 75%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: hsl(224, 30%, 27%);
+    color: white;
+    font-family: var(--font-bold);
+    font-size: 1em;
+}
+
+.summary .btn:hover {
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        box-shadow: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .result {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .result p {
+        margin-bottom: 1em;
+    }
+    .btn {
+        margin-bottom: 1em;
+    }
+}
+
+
